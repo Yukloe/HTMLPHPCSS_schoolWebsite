@@ -16,77 +16,22 @@ body
 	margin:auto;	
 }
 
-ul.chosen_bar_elements{
-	color: #41403C;
-	margin-left: auto;
-    margin-right: auto;
-    text-align:center;
-	font-family: Trebuchet MS;
+
+	/*titre principal*/
+h1{
+	font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue";
+	padding-top: 50px;
+	padding-bottom: 20px;
+	text-align:center;
 }
 
-h1.title
-{
-	color: #41403C;
-	font-family: Trebuchet MS;
-	margin-left: auto;
-    margin-right: auto;
-    text-align:center;
+p{
+	font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue";
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 25px;
+	font-weight: normal;
 }
-
-img.logo {
-	position: relative;
-}
-
-div.row {
-    height: 80px;
-    width: 100%;
-    align-items: center;
-    background-color:#D08856;
-
-}
-
-div.col-7 {
-    height: 80px;
-    width: 100%;
-    align-items: center;
-    background-color:#AA210F;
-}
-
-
-	/*Cette partie est réservée à la bar de navigation*/
-
---#{$prefix}navbar-padding-x: #{if($navbar-padding-x == null, 0, $navbar-padding-x)};
-  --#{$prefix}navbar-padding-y: #{$navbar-padding-y};
-  --#{$prefix}navbar-color: #{$navbar-light-color};
-  --#{$prefix}navbar-hover-color: #{$navbar-light-hover-color};
-  --#{$prefix}navbar-disabled-color: #{$navbar-light-disabled-color};
-  --#{$prefix}navbar-active-color: #{$navbar-light-active-color};
-  --#{$prefix}navbar-brand-padding-y: #{$navbar-brand-padding-y};
-  --#{$prefix}navbar-brand-margin-end: #{$navbar-brand-margin-end};
-  --#{$prefix}navbar-brand-font-size: #{$navbar-brand-font-size};
-  --#{$prefix}navbar-brand-color: #{$navbar-light-brand-color};
-  --#{$prefix}navbar-brand-hover-color: #{$navbar-light-brand-hover-color};
-  --#{$prefix}navbar-nav-link-padding-x: #{$navbar-nav-link-padding-x};
-  --#{$prefix}navbar-toggler-padding-y: #{$navbar-toggler-padding-y};
-  --#{$prefix}navbar-toggler-padding-x: #{$navbar-toggler-padding-x};
-  --#{$prefix}navbar-toggler-font-size: #{$navbar-toggler-font-size};
-  --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-light-toggler-icon-bg)};
-  --#{$prefix}navbar-toggler-border-color: #{$navbar-light-toggler-border-color};
-  --#{$prefix}navbar-toggler-border-radius: #{$navbar-toggler-border-radius};
-  --#{$prefix}navbar-toggler-focus-width: #{$navbar-toggler-focus-width};
-  --#{$prefix}navbar-toggler-transition: #{$navbar-toggler-transition};
-  --#{$prefix}nav-link-padding-x: 0;
-  --#{$prefix}nav-link-padding-y: #{$nav-link-padding-y};
-  @include rfs($nav-link-font-size, --#{$prefix}nav-link-font-size);
-  --#{$prefix}nav-link-font-weight: #{$nav-link-font-weight};
-  --#{$prefix}nav-link-color: var(--#{$prefix}navbar-color);
-  --#{$prefix}nav-link-hover-color: var(--#{$prefix}navbar-hover-color);
-  --#{$prefix}nav-link-disabled-color: var(--#{$prefix}navbar-disabled-color);
-
-  nav{
-  	color: #EF1515;
-  }
-
 
 	/*Cette partie est réservée au caroussel*/
 
