@@ -1,0 +1,123 @@
+	/*
+		background-color:#DDD;
+		margin:auto;
+		width:1000px;
+		color: #3F3D40;
+		font-variant:small-caps;
+		font-family: Courier New, monospace;
+		text-align:center; // Centre l'objet
+
+}
+	*/
+
+body
+{
+	background-color:#DDD;
+	margin:auto;	
+}
+
+ul.chosen_bar_elements{
+	color: #41403C;
+	margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+	font-family: Trebuchet MS;
+}
+
+h1.title
+{
+	color: #41403C;
+	font-family: Trebuchet MS;
+	margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+}
+
+img.logo {
+	position: relative;
+}
+
+div.row {
+    height: 80px;
+    width: 100%;
+    align-items: center;
+    background-color:#D08856;
+
+}
+
+div.col-7 {
+    height: 80px;
+    width: 100%;
+    align-items: center;
+    background-color:#AA210F;
+}
+
+
+	/*Cette partie est réservée à la bar de navigation*/
+
+--#{$prefix}navbar-padding-x: #{if($navbar-padding-x == null, 0, $navbar-padding-x)};
+  --#{$prefix}navbar-padding-y: #{$navbar-padding-y};
+  --#{$prefix}navbar-color: #{$navbar-light-color};
+  --#{$prefix}navbar-hover-color: #{$navbar-light-hover-color};
+  --#{$prefix}navbar-disabled-color: #{$navbar-light-disabled-color};
+  --#{$prefix}navbar-active-color: #{$navbar-light-active-color};
+  --#{$prefix}navbar-brand-padding-y: #{$navbar-brand-padding-y};
+  --#{$prefix}navbar-brand-margin-end: #{$navbar-brand-margin-end};
+  --#{$prefix}navbar-brand-font-size: #{$navbar-brand-font-size};
+  --#{$prefix}navbar-brand-color: #{$navbar-light-brand-color};
+  --#{$prefix}navbar-brand-hover-color: #{$navbar-light-brand-hover-color};
+  --#{$prefix}navbar-nav-link-padding-x: #{$navbar-nav-link-padding-x};
+  --#{$prefix}navbar-toggler-padding-y: #{$navbar-toggler-padding-y};
+  --#{$prefix}navbar-toggler-padding-x: #{$navbar-toggler-padding-x};
+  --#{$prefix}navbar-toggler-font-size: #{$navbar-toggler-font-size};
+  --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-light-toggler-icon-bg)};
+  --#{$prefix}navbar-toggler-border-color: #{$navbar-light-toggler-border-color};
+  --#{$prefix}navbar-toggler-border-radius: #{$navbar-toggler-border-radius};
+  --#{$prefix}navbar-toggler-focus-width: #{$navbar-toggler-focus-width};
+  --#{$prefix}navbar-toggler-transition: #{$navbar-toggler-transition};
+  --#{$prefix}nav-link-padding-x: 0;
+  --#{$prefix}nav-link-padding-y: #{$nav-link-padding-y};
+  @include rfs($nav-link-font-size, --#{$prefix}nav-link-font-size);
+  --#{$prefix}nav-link-font-weight: #{$nav-link-font-weight};
+  --#{$prefix}nav-link-color: var(--#{$prefix}navbar-color);
+  --#{$prefix}nav-link-hover-color: var(--#{$prefix}navbar-hover-color);
+  --#{$prefix}nav-link-disabled-color: var(--#{$prefix}navbar-disabled-color);
+
+  nav{
+  	color: #EF1515;
+  }
+
+
+	/*Cette partie est réservée au caroussel*/
+
+span.carousel-control{
+	color:             $white;
+	width:             15%;
+	opacity:           .5;
+	hover-opacity:     .9;
+	transition:        opacity .15s ease;
+}
+
+span.carousel-indicator {
+	width:           30px;
+	height:          3px;
+	hit-area-height: 10px;
+	spacer:          3px;
+	opacity:         .5;
+	active-bg:       $white;
+	active-opacity:  1;
+	transition:      opacity .6s ease;
+}
+
+span.carousel-caption{
+	width:             70%;
+	color:             $white;
+	padding-y:         1.25rem;
+	spacer:            1.25rem;
+}
+
+span.carousel-control-icon-width:        2rem;
+span.carousel-control-prev-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>");
+span.carousel-control-next-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
+span.carousel-transition-duration:       .6s;
+span.carousel-transition:                transform $carousel-transition-duration ease-in-out; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
