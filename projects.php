@@ -1,5 +1,5 @@
 <?php
-  $titre = "Header";
+  $titre = "Page de projets";
   include('header.inc.php')
 ?>
 <?php
