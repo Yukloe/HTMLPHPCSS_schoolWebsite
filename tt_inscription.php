@@ -10,7 +10,7 @@
 
   // Option pour bcrypt
   $options = [
-        'cost' => 12,
+        'cost' => 11,
   ];
 
   // Connexion :
