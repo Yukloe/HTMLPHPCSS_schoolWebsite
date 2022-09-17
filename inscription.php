@@ -35,3 +35,7 @@
   </div>
 
 </form>
+
+<?php
+  include('basdepage.inc.php')
+?>

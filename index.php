@@ -8,3 +8,6 @@
 <?php
   include('welcom.php')
 ?>
+<?php
+  include('basdepage.inc.php')
+?>
