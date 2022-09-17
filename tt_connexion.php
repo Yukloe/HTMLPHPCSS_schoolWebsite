@@ -1,17 +1,9 @@
 <?php
-  session_start(); // Pour les massages
+  session_start(); // Pour les messages
 
   // Contenu du formulaire :
-  $nom =  htmlentities($_POST['nom']);
-  $prenom = htmlentities($_POST['prenom']);
   $email =  htmlentities($_POST['email']);
   $password = htmlentities($_POST['password']);
-  $role = NULL; // tut pour tuteur, resp pour responsable PING, adm pour admin par exemple :o)
-
-  // Option pour bcrypt
-  $options = [
-        'cost' => 11,
-  ];
 
   // Connexion :
   require_once("param.inc.php");
