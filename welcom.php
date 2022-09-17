@@ -20,27 +20,29 @@
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-            <div class="carousel-item active">
-            <img class="img-fluid" src="http://dev.meilleures-licences.com/photo_ecole/batiment-esigelec-1448540153.jpg" alt="Photo projet PING 1"/>
-            <div class="carousel-caption d-none d-md-block">
-                <h5>L'Ecole Supérieure d'ingénieur en génie électrique</h5>
-                <p>Ecole d'ingénieur abbritant un démon du nom de "Charnacé". Bien que ce ne soit qu'une légendaire, des traumatisés érrandes bien les couloirs...</p>
-            </div>
-            </div>
-            <div class="carousel-item">
-            <img src="images/carrousel/feuillebro.jpg" alt="Photo Bro" >
-            <div class="carousel-caption d-none d-md-block">
-                <h5>American exchanged student: Leafwood-pretty</h5>
-                <p>"Une école incredible qui m'a donné des stars dans les yeux... presque autant que ceux de mon drapeau : l'A-ME-RIQUE"</p>
-            </div>
-            </div>
-            <div class="carousel-item">
-            <img class="img-fluid" src="http://dev.meilleures-licences.com/photo_ecole/batiment-esigelec-1448540153.jpg" alt="Photo projet PING 1"/>
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>Some representative placeholder content for the third slide.</p>
-            </div>
-            </div>
+          <div class="carousel-item active">
+            <img src="images/carrousel/esig.jpeg" class="w-auto p-3" alt="Photo esig 1"/>
+          <div class="carousel-caption d-none d-md-block">
+              <h5>L'Ecole Supérieure d'ingénieur en génie électrique</h5>
+              <p>Ecole d'ingénieur abbritant un démon du nom de "Charnacé". Bien que ce ne soit qu'une légende, des traumatisés érrandes bien les couloirs...</p>
+          </div>
+          </div>
+          <div class="carousel-item">
+          <a href="https://fr.wikipedia.org/wiki/Mister_Monde">
+            <img src="images/carrousel/feuillebro.jpg" class="w-auto p-3" alt="Photo Bro" >
+          </a>
+          <div class="carousel-caption d-none d-md-block">
+              <h5>American exchanged student: Leafwood-pretty</h5>
+              <p>"Une école incredible qui m'a donné des stars dans les yeux... presque autant que ceux de mon drapeau : l'A-ME-RIQUE"</p>
+          </div>
+          </div>
+          <div class="carousel-item">
+            <img class="img-fluid" src="http://dev.meilleures-licences.com/photo_ecole/batiment-esigelec-1448540153.jpg" class="w-auto p-3" alt="Photo projet PING 1"/>
+          <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+          </div>
+          </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>

@@ -9,18 +9,20 @@
 
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                <a class="nav-link active" aria-current="page" href="index.php">Accueil</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Mon compte</a>
+                <a class="nav-link active" aria-current="page" href="account.php">Mon compte</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Liste des projets</a>
+                <a class="nav-link active" aria-current="page" href="projects.php">Liste des projets</a>
               </li>
             </ul>
 
             <form class="d-flex">
-              <img src="images/logo/Logo_ESIGELEC.svg" alt="logo ESIGELEC" >  
+              <a href="https://esigelec.fr/fr">
+                <img src="images/logo/Logo_ESIGELEC.svg" alt="logo ESIGELEC" >  
+              </a>
             </form>
 
           </div>
