@@ -24,6 +24,9 @@
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="connexion.php">Connexion</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="test.php">Test</a>
+              </li>
             </ul>
 
             <form class="d-flex">
