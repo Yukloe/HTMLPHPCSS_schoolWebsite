@@ -2,5 +2,5 @@
   $host="localhost";
   $login="root";
   $passwd="root";
-  $dbname="";
+  $dbname="esigpingwebsite";
 ?>
