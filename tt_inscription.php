@@ -6,7 +6,8 @@
   $prenom = htmlentities($_POST['prenom']);
   $email =  htmlentities($_POST['email']);
   $password = htmlentities($_POST['password']);
-  //$role = "vis"; // tut pour tuteur, resp pour responsable PING, adm pour admin par exemple, vis pour visiteur)
+  $entreprise = htmlentities($_POST['entreprise']);
+  $role = "vis"; // tut pour tuteur, resp pour responsable PING, adm pour admin par exemple, vis pour visiteur)
 
   // Option pour bcrypt
   $options = [
@@ -22,9 +23,9 @@
   }
 
   // Attention, ici on ne vérifie pas si l'utilisateur existe déjà
-  if ($stmt = $mysqli->prepare("INSERT INTO user(nom, prenom, email, password, role) VALUES (?, ?, ?, ?, ?)")) {
+  if ($stmt = $mysqli->prepare("INSERT INTO user(nom, prenom, email, password, role, company) VALUES (?, ?, ?, ?, ?, ?)")) {
     $password = password_hash($password, PASSWORD_BCRYPT, $options);
-    $stmt->bind_param("ssssi", $nom, $prenom, $email, $password, $role);
+    $stmt->bind_param("ssssss", $nom, $prenom, $email, $password, $role, $entreprise);
     // Le message est mis dans la session, il est préférable de séparer message normal et message d'erreur.
     if($stmt->execute()) {
         $_SESSION['message'] = "Enregistrement réussi";
