@@ -33,10 +33,11 @@
 
     } else {
         $_SESSION['message'] =  "Impossible d'enregistrer";
+        header('Location: inscription.php');
     }
   }
   // Redirection vers la page d'accueil par exemple :
-  header('Location: index.php');
+  
 
 
 ?>

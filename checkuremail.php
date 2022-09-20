@@ -9,7 +9,7 @@
 <p>
         Veuillez vérifier votre addresse-mail, puis retourner à l'accueil
       </p>
-      <a class="btn btn-primary btn-lg" href="index.php" role="button">Accueil</a>
+      <a class="btn btn-danger btn-lg" href="index.php" role="button">Accueil</a>
 
 <?php
   include('basdepage.inc.php')
