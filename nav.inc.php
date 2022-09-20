@@ -27,6 +27,12 @@
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="test.php">Test</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="add_subject.php">Ajouter un projet</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="connexion.php">???</a>
+              </li>
             </ul>
 
             <form class="d-flex">
