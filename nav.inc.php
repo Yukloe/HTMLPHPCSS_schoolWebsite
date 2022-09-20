@@ -31,7 +31,7 @@
                 <a class="nav-link" aria-current="page" href="add_subject.php">Ajouter un projet</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="connexion.php">???</a>
+                <a class="nav-link" aria-current="page" href="connexion.php">Connexion, mais un autre bouton</a>
               </li>
             </ul>
 

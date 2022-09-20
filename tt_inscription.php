@@ -28,7 +28,8 @@
     $stmt->bind_param("ssssss", $nom, $prenom, $email, $password, $role, $entreprise);
     // Le message est mis dans la session, il est préférable de séparer message normal et message d'erreur.
     if($stmt->execute()) {
-        $_SESSION['message'] = "Enregistrement réussi";
+        //$_SESSION['message'] = "Enregistrement réussi";
+        header('Location: checkuremail.php');
 
     } else {
         $_SESSION['message'] =  "Impossible d'enregistrer";
