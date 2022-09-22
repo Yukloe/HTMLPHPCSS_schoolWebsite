@@ -23,13 +23,13 @@
     }elseif($result->num_rows == 0){
       echo '<p>Aucun compte relié à cette email</p>';
     }else{
-      $hash = $mysqli->query("SELECT password FROM user WHERE email = '$email'");
-      if(password_verify('$password', $hash)){
+      $hash = $result->fetch_assoc();
+      if(password_verify($password, $hash["password"])){
         echo 'Connexion réussie !';
         header('Location: account.php');
       }
       else{
-        echo '<p>Mot de passe non valide (ou juste code non fonctionnel mais chuttttt</p>';
+        echo '<p>Mot de passe non valide (ou juste code non fonctionnel)</p>';
         header('Location: connexion.php');
       }
     }
