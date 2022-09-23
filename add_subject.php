@@ -2,7 +2,6 @@
   $titre = "Page d'inscription";
   include('header.inc.php')
 ?>
-<?php session_start()?>
 <?php
   include('nav.inc.php')
 ?>
