@@ -6,7 +6,7 @@
   include('nav.inc.php')
 ?>
 
-<form  method="POST" action="tt_inscription.php">
+<form  method="POST" action="tt_add_subject.php">
   <div class="container">
     <div class="row my-2">
       <label for="nom" class="form-label">Nom du projet</label>
@@ -32,21 +32,18 @@
         <option value="2">activé</option>
       </select>
     </div>
-    <div class="row my-2">
-      <label for="image-project" class="form-label">Image du projet</label>
-      <input class="form-control" type="file" id="image-project">
-    </div>
-    <div class="row my-2">
-      <label for="desc-project" class="form-label">Description détaillée du projet</label>
-      <input class="form-control" type="file" id="desc-project">
-    </div>
+
     <div class="row my-2">
         <button type="submit" class="btn btn-primary">Envoyer la demande</button>
     </div>
   </div>
-
 </form>
+
+
 
 <?php
   include('basdepage.inc.php')
 ?>
+
+
+<!--ATENTION PDF RENOMMER LE SUJET
