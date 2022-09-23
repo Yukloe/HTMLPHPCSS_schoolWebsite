@@ -1,6 +1,4 @@
 <?php
-  session_start(); // Pour les messages
-
   // Contenu du formulaire :
   $nom =  htmlentities($_POST['nom']);
   $prenom = htmlentities($_POST['prenom']);

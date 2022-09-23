@@ -1,0 +1,5 @@
+nom : Admin
+Prénom : istrateur
+Email : admin.admein@ad.min
+mdp : addmein
+entreprise : admin

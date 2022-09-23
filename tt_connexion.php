@@ -1,6 +1,4 @@
 <?php
-  session_start(); // Pour les messages
-
   // Contenu du formulaire :
   $email =  htmlentities($_POST['email']);
   $password = htmlentities($_POST['password']);
