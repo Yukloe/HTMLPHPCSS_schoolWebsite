@@ -11,29 +11,53 @@
                 <a class="nav-link active" aria-current="page" href="index.php">Accueil</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="test.php">Test</a>
+              </li>
+              <?php
+              if(isset($_SESSION["email"])){
+              ?>
+              <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="account.php">Mon compte</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="deconnexion.php">Deconnexion</a>
+              </li>
+              <?php
+              if($_SESSION["role"]=="adm" || $_SESSION["role"]=="tut"){
+              ?>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="projects.php">Liste de mes projets</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="add_subject.php">Ajouter un projet</a>
+              </li>
+              <?php
+              }
+              if($_SESSION["role"]=="adm" || $_SESSION["role"]=="resp"){
+              ?>
+              <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="projects.php">Liste des projets</a>
               </li>
-            </ul>
-            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="toactivate.php">Comptes à activer</a>
+              </li>
+              <?php
+              }
+              ?>
+              <?php
+              }else{
+              ?>
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="inscription.php">Inscription</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="connexion.php">Connexion</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="test.php">Test</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="add_subject.php">Ajouter un projet</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="connexion.php">Connexion, mais un autre bouton</a>
-              </li>
-            </ul>
+              <?php
+              }
+              ?>
+              
+          
 
             <form class="d-flex">
               <a href="https://esigelec.fr/fr">

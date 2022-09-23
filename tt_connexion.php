@@ -33,6 +33,7 @@
       if(password_verify($password, $res_fetch["password"])){
         $_SESSION['email'] = $email;
         $_SESSION['prenom'] = $res_fetch["prenom"];
+        $_SESSION['role'] = $res_fetch["role"];
         //echo 'Bonjour ' .$_SESSION['prenom'].'';
         header('Location: account.php');
       }
