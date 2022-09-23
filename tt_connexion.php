@@ -29,10 +29,10 @@
     }elseif($result->num_rows == 0){
       echo '<p>Aucun compte relié à cette email</p>';
     }else{
-      $hash = $result->fetch_assoc();
-      if(password_verify($password, $hash["password"])){
+      $res_fetch = $result->fetch_assoc();
+      if(password_verify($password, $res_fetch["password"])){
         $_SESSION['email'] = $email;
-        $_SESSION['prenom'] = $hash["prenom"];
+        $_SESSION['prenom'] = $res_fetch["prenom"];
         //echo 'Bonjour ' .$_SESSION['prenom'].'';
         header('Location: account.php');
       }
