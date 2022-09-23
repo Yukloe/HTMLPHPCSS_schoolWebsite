@@ -23,7 +23,9 @@
     }else{
       $hash = $result->fetch_assoc();
       if(password_verify($password, $hash["password"])){
-        echo 'Connexion réussie !';
+        $_SESSION['email'] = $email;
+        $_SESSION['prenom'] = $hash["prenom"];
+        //echo 'Bonjour ' .$_SESSION['prenom'].'';
         header('Location: account.php');
       }
       else{
