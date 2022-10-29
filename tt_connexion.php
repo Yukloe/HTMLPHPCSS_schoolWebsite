@@ -36,6 +36,7 @@
         $_SESSION['email'] = $email;
         $_SESSION['prenom'] = $res_fetch["prenom"];
         $_SESSION['role'] = $res_fetch["role"];
+        $_SESSION['id'] = $res_fetch["id"];
         //echo 'Bonjour ' .$_SESSION['prenom'].'';
         header('Location: account.php');
       }

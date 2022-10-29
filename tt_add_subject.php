@@ -1,11 +1,12 @@
 <?php
+
+  include('header.inc.php');
+
   // Contenu du formulaire :
   $name =  htmlentities($_POST['name']);
   $description = htmlentities($_POST['description']);
-  $multi =  htmlentities($_POST['multi']);
-  $confidential = htmlentities($_POST['confidential']);
-  $creator_id = "1111111"; // tut pour tuteur, resp pour responsable PING, adm pour admin par exemple, vis pour visiteur)
-  $valide = "0"; 
+  $multi =  filter_input(INPUT_POST, 'multi', FILTER_SANITIZE_STRING);
+  $confidential =  filter_input(INPUT_POST, 'confidential', FILTER_SANITIZE_STRING);
   
   // Connexion :
   require_once("param.inc.project.php");
@@ -16,8 +17,8 @@
   }
 
   // Attention, ici on ne vérifie pas si le project existe déjà
-  if ($stmt = $mysqli->prepare("INSERT INTO project(name, description, multi, confidential, creator_id, valide) VALUES (?, ?, ?, ?, ?, ?)")) {
-    //$stmt->bind_param($name, $description, $multi, $confidential, $creator_id, $valide);
+  if ($stmt = $mysqli->prepare("INSERT INTO project(name, description, multi, confidential, creator_id) VALUES (?, ?, ?, ?, ?)")) {
+    $stmt->bind_param("sssss", $name, $description, $multi, $confidential, $_SESSION['id']);
     // Le message est mis dans la session, il est préférable de séparer message normal et message d'erreur.
     if($stmt->execute()) {
       $_SESSION['message'] = "Enregistrement réussi";

@@ -23,8 +23,8 @@
       <label for="multi" class="form-label">Mode deux équipes</label>
       <select class="form-select" name="multi" aria-label="Default select example">
         <option selected>Choisissez une option</option>
-        <option multi-value=1>non-activé</option>
-        <option multi-value=2>activé</option>
+        <option value=1>non-activé</option>
+        <option value=2>activé</option>
       </select>
     </div>
 
@@ -32,8 +32,8 @@
       <label for="confidential" class="form-label">Mode confidentiel</label>
       <select class="form-select" name="confidential" aria-label="Default select example">
         <option selected>Choisissez une option</option>
-        <option conf-value=1>non-activé</option>
-        <option conf-value=2>activé</option>
+        <option value=1>non-activé</option>
+        <option value=2>activé</option>
       </select>
     </div>
 
@@ -43,7 +43,7 @@
   </div>
 </form>
 
-
+ 
 
 <?php
   include('basdepage.inc.php')
