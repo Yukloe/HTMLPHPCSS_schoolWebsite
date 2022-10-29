@@ -8,28 +8,32 @@
 
 <form  method="POST" action="tt_add_subject.php">
   <div class="container">
+
     <div class="row my-2">
       <label for="nom" class="form-label">Nom du projet</label>
-      <input type="text" class="form-control " id="project-name" name="project-name" placeholder="Le nom du projet..." required>
+      <input type="text" class="form-control " id="name" name="name" placeholder="Le nom du projet..." required>
     </div> 
+
     <div class="row my-2">
-      <label for="quick-desc" class="form-label">Description rapide du programme</label>
-      <textarea class="form-control" id="quick-desc" rows="3" placeholder="La description rapide du programme..." required></textarea>
+      <label for="description" class="form-label">Description rapide du programme</label>
+      <textarea class="form-control" id="description" name="description" rows="3" placeholder="La description rapide du programme..." required></textarea>
     </div>
+
     <div class="row my-2">
-      <label for="quick-desc" class="form-label">Mode deux équipes</label>
-      <select class="form-select" aria-label="Default select example">
+      <label for="multi" class="form-label">Mode deux équipes</label>
+      <select class="form-select" name="multi" aria-label="Default select example">
         <option selected>Choisissez une option</option>
-        <option value="1">non-activé</option>
-        <option value="2">activé</option>
+        <option multi-value=1>non-activé</option>
+        <option multi-value=2>activé</option>
       </select>
     </div>
+
     <div class="row my-2">
-      <label for="quick-desc" class="form-label">Mode confidentiel</label>
-      <select class="form-select" aria-label="Default select example">
+      <label for="confidential" class="form-label">Mode confidentiel</label>
+      <select class="form-select" name="confidential" aria-label="Default select example">
         <option selected>Choisissez une option</option>
-        <option value="1">non-activé</option>
-        <option value="2">activé</option>
+        <option conf-value=1>non-activé</option>
+        <option conf-value=2>activé</option>
       </select>
     </div>
 

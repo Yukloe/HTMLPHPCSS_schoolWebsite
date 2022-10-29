@@ -3,7 +3,7 @@
     session_start();
     /*On utilise session_id() pour récupérer l'id de session s'il existe.
      *Si l'id de session n'existe  pas, session_id() rnevoie une chaine de caractères vide*/
-    //$id_session = session_id();
+    $id_session = session_id();
 ?>
 
 <?php
@@ -11,14 +11,16 @@
   $email =  htmlentities($_POST['email']);
   $password = htmlentities($_POST['password']);
 
-  //$email = stripcslashes($email);
-  //$password = stripcslashes($password);
-  //$email = $mysqli -> real_escape_string($email);
-  //$password = $mysqli -> real_escape_string($password);
+  $email = stripcslashes($email);
+  $password = stripcslashes($password);
 
   // Connexion :
-  require_once("param.inc.php");
+  require_once("param.inc.user.php");
   $mysqli = new mysqli($host, $login, $passwd, $dbname);
+
+  $email = $mysqli -> real_escape_string($email);
+  $password = $mysqli -> real_escape_string($password);
+
   if ($mysqli->connect_error) {
       die('Erreur de connexion (' . $mysqli->connect_errno . ') '
               . $mysqli->connect_error);
