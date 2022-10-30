@@ -26,7 +26,7 @@
               if($_SESSION["role"]=="adm" || $_SESSION["role"]=="tut"){
               ?>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="projects.php">Liste de mes projets</a>
+                <a class="nav-link active" aria-current="page" href="my_projects.php">Liste de mes projets</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="add_subject.php">Ajouter un projet</a>
@@ -36,7 +36,7 @@
               if($_SESSION["role"]=="adm" || $_SESSION["role"]=="resp"){
               ?>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="projects.php">Liste des projets</a>
+                <a class="nav-link active" aria-current="page" href="public_projects.php">Liste des projets</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="toactivate.php">Comptes à activer</a>
