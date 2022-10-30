@@ -1,29 +1,51 @@
 <?php
-  session_start();
-?>
-<?php
   include('header.inc.php')
 ?>
 <?php
   include('nav.inc.php')
 ?>
 
+<div class=container>
+  <h1>Liste des demandes d'inscription</h1>
+</div>
+
 <?php
   // Connexion :
-  require_once("param.inc.project.php");
+  require_once("param.inc.user.php");
   $mysqli = new mysqli($host, $login, $passwd, $dbname);
   if ($mysqli->connect_error) {
       die('Erreur de connexion (' . $mysqli->connect_errno . ') '
               . $mysqli->connect_error);
-  }else{
-    $result = $mysqli->query("SELECT * FROM user WHERE active = 0");
-    if(!$result){
-      die('Echec de la requête : '.$mysqli->error);
-    }elseif($result->num_rows == 0){
-      echo '<p>Aucun compte inactif</p>';
-    }else{
-      $res_fetch = $result->fetch_assoc();
-      
+  }
+  
+  // Execution
+  if ($stmt = $mysqli->prepare("SELECT nom, prenom, email FROM `user` WHERE active=0")){
+    $stmt->execute();
+    $stmt->bind_result($nom, $prenom, $email);
+    $index=1;
+    while ($stmt->fetch()) { ?>
+        <div class="card" style="margin : 10px 20px 0 15px;">
+          <div class="card-body">
+            <h5 class="card-title">Demande d'inscription n°<?= $index ?></h5>
+            <?php $index+=1; ?>
+            <p class="card-text">
+                Prénom : <?= $prenom ?> <br>
+                Nom : <?= $nom ?> <br>
+                Email : <?= $email ?> <br>
+            </p>
+            <form action="tt_activate.php" method="post">
+              <input type="hidden" name="email" value="<?=$email?>">
+              <button class="btn btn-primary" type="submit">Valider le compte</button>
+            </form>
+
+          </div>
+        </div>
+    <?php
+    }
+
+  } else
+    echo "Erreur dans l'execution de la commande SQL";
+
 ?>
 
 <?php

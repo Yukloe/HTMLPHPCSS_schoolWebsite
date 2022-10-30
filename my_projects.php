@@ -22,7 +22,7 @@
   }
 
   // Execution
-  if ($stmt = $mysqli->prepare("SELECT name, description, multi, confidential, valide, creator_id FROM `project`")){
+  if ($stmt = $mysqli->prepare("SELECT name, description, multi, confidential, valide, creator_id FROM `user`")){
     $stmt->execute();
     $stmt->bind_result($name, $description, $multi, $confidential, $valide, $creator_id);
     while ($stmt->fetch()) { 
