@@ -39,7 +39,10 @@
                 <a class="nav-link active" aria-current="page" href="public_projects.php">Liste des projets</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="toactivate.php">Comptes à activer</a>
+                <a class="nav-link active" aria-current="page" href="project_management.php">Gestion des projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="toactivate.php">Activation des comptes</a>
               </li>
               <?php
               }

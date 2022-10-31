@@ -8,7 +8,7 @@
 ?>
 
 <div class=container>
-  <h1>Liste des projets personnels</h1>
+  <h1>Gestion des projets</h1>
 </div>
 
 <?php
@@ -22,18 +22,21 @@
   }
 
   // Execution
-  if ($stmt = $mysqli->prepare("SELECT name, description, multi, confidential, valide, creator_id FROM `project`")){
+  if ($stmt = $mysqli->prepare("SELECT id, name, description, multi, confidential, valide, creator_id FROM `project`")){
     $stmt->execute();
-    $stmt->bind_result($name, $description, $multi, $confidential, $valide, $creator_id);
-    while ($stmt->fetch()) { 
-      if($creator_id==$_SESSION['id']) { ?>
+    $stmt->bind_result($id, $name, $description, $multi, $confidential, $valide, $creator_id);
+    $index=1;
+    while ($stmt->fetch()) { ?>
         <div class="card" style="margin : 10px 20px 0 15px;">
           <div class="card-body">
             <!--Add the name-->
-            <h5 class="card-title"><?= $name; ?></h5>
+            <h5 class="card-title">Projet n°<?= $index; ?></h5>
       
             <!--Add the-->
-            <p class="card-text"><?= $description; ?></p>
+            <p class="card-text">
+              <?= $name; ?></br>
+              <?= $description; ?>
+            </p>
             
             <!--Verify is the multi-team mode is checked-->
             <div class="form-check">
@@ -92,12 +95,39 @@
             <p></p>
             
             <!--Add the file-->
-            <a href="#" class="btn btn-primary">Get the pdf file</a>
+
+            <a href="#" class="btn btn-primary">Obtenir le fichier pdf</a>
+
+            <?php if ($valide==0) { ?>
+              <!-- Validate projects-->
+              <form action="tt_project_validation.php" method="post" style="margin: 4px 0;">
+                <input type="hidden" type name="id" value="<?=$id?>">
+                <button class="btn btn-primary" type="submit">Valider le projet</button>
+              </form>
+
+              <form action="tt_project_validation.php" method="post" style="margin: 4px 0;">
+                <input type="hidden" name="id" value="<?=$id?>">
+                <button class="btn btn-primary" type="submit">Demander une modification du projet</button>
+              </form>
+
+              <form action="tt_project_rejection.php" method="post" style="margin: 4px 0;">
+                <input type="hidden" name="id" value="<?=$id?>">
+                <button class="btn btn-primary" type="submit">Rejeter le projet</button>
+              </form>
+
+            <?php } else if ($valide==1){ ?>
+              <form action="tt_project_validation.php" method="post" style="margin: 4px 0;">
+                <input type="hidden" name="valide" value="<?=$valide?>">
+                <button class="btn btn-primary" type="submit">Suspendre le projet</button>
+              </form>
+            <?php } else {?>
+              <p style="color: red;">PROJET REJETÉ</p>
+            <?php }?>
           </div>
         </div>
-    <?php
-      }
-    }
+
+    <?php $index+=1;
+    }    
   } else
     echo "Erreur dans l'execution de la commande SQL";
 
