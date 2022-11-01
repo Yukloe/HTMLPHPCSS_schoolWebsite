@@ -11,7 +11,7 @@
 
 <?php
   // Connexion :
-  require_once("param.inc.user.php");
+  require_once("param.inc.php");
   $mysqli = new mysqli($host, $login, $passwd, $dbname);
   if ($mysqli->connect_error) {
       die('Erreur de connexion (' . $mysqli->connect_errno . ') '
