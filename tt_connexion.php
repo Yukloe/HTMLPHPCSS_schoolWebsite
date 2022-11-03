@@ -15,7 +15,7 @@
   $password = stripcslashes($password);
 
   // Connexion :
-  require_once("param.inc.user.php");
+  require_once("param.inc.php");
   $mysqli = new mysqli($host, $login, $passwd, $dbname);
 
   $email = $mysqli -> real_escape_string($email);

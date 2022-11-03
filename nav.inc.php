@@ -45,7 +45,13 @@
                 <a class="nav-link active" aria-current="page" href="toactivate.php">Activation des comptes</a>
               </li>
               <?php
-              }
+              }if($_SESSION["role"]=="adm"){
+                ?>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="toPutreferent.php">Definir comme referent</a>
+                </li>
+                <?php
+                }
               ?>
               <?php
               }else{

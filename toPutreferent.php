@@ -6,7 +6,7 @@
 ?>
 
 <div class=container>
-  <h1>Liste des demandes d'inscription</h1>
+  <h1>Liste des comptes</h1>
 </div>
 
 <?php
@@ -19,7 +19,7 @@
   }
   
   // Execution
-  if ($stmt = $mysqli->prepare("SELECT nom, prenom, email FROM `user` WHERE active=0")){
+  if ($stmt = $mysqli->prepare("SELECT nom, prenom, email FROM `user` WHERE role LIKE 'tut'")){
     $stmt->execute();
     $stmt->bind_result($nom, $prenom, $email);
     $index=1;
@@ -33,7 +33,7 @@
                 Nom : <?= $nom ?> <br>
                 Email : <?= $email ?> <br>
             </p>
-            <form action="tt_activate.php" method="post">
+            <form action="tt_referent.php" method="post">
               <input type="hidden" name="email" value="<?=$email?>">
               <button class="btn btn-primary" type="submit">Valider le compte</button>
             </form>

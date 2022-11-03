@@ -13,7 +13,7 @@
 
   $email=mysqli_real_escape_string($mysqli,$email);
 
-  $stmt = "UPDATE user SET active = 1, role='tut' WHERE user.email='{$email}'";
+  $stmt = "UPDATE user SET role='resp' WHERE user.email='{$email}'";
     if ($mysqli->query($stmt) === TRUE) {
         echo "Record updated successfully";
     } else {
