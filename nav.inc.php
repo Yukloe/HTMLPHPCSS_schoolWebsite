@@ -36,7 +36,7 @@
               if($_SESSION["role"]=="adm" || $_SESSION["role"]=="resp"){
               ?>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="public_projects.php">Liste des projets</a>
+                <a class="nav-link active" aria-current="page" href="public_projects.php">Liste des projets publics</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="project_management.php">Gestion des projects</a>

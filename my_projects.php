@@ -78,21 +78,29 @@
               ?>
                   <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled checked>
               <?php
-                } else {
+                } else if ($valide!=5) {
               ?>
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled> 
-              <?php
-                }
-              ?>
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled> 
               <label class="form-check-label" for="flexCheckDisabled">
                 Validé
               </label>
+              <?php
+              }
+              ?>
             </div>
+
             <!--Add a space-->
             <p></p>
             
             <!--Add the file-->
             <a href="#" class="btn btn-primary">Get the pdf file</a>
+            <?php
+            if ($valide==5) {
+            ?>
+            <p style="color: red;">PROJET REJETÉ</p>
+            <?php
+            }
+            ?>
           </div>
         </div>
     <?php

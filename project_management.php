@@ -32,7 +32,7 @@
             <!--Add the name-->
             <h5 class="card-title">Projet n°<?= $index; ?></h5>
       
-            <!--Add the-->
+            <!--Add the data-->
             <p class="card-text">
               <?= $name; ?></br>
               <?= $description; ?>
@@ -105,20 +105,26 @@
                 <button class="btn btn-primary" type="submit">Valider le projet</button>
               </form>
 
-              <form action="tt_project_validation.php" method="post" style="margin: 4px 0;">
+              <!-- Ask to modify projects-->
+              <form action="tt_edit_message.php" method="post" style="margin: 4px 0;">
                 <input type="hidden" name="id" value="<?=$id?>">
+                <input type="hidden" name="action" value="modify">
                 <button class="btn btn-primary" type="submit">Demander une modification du projet</button>
               </form>
 
-              <form action="tt_project_rejection.php" method="post" style="margin: 4px 0;">
+              <!-- Reject projects-->
+              <form action="tt_edit_message.php" method="post" style="margin: 4px 0;">
                 <input type="hidden" name="id" value="<?=$id?>">
+                <input type="hidden" name="action" value="delete">
                 <button class="btn btn-primary" type="submit">Rejeter le projet</button>
               </form>
 
             <?php } else if ($valide==1){ ?>
-              <form action="tt_project_validation.php" method="post" style="margin: 4px 0;">
-                <input type="hidden" name="valide" value="<?=$valide?>">
-                <button class="btn btn-primary" type="submit">Suspendre le projet</button>
+              <!-- Delete projects-->
+              <form action="tt_edit_message.php" method="post" style="margin: 4px 0;">
+                <input type="hidden" name="id" value="<?=$id?>">
+                <input type="hidden" name="action" value="delete">
+                <button class="btn btn-primary" type="submit">Supprimer le projet</button>
               </form>
             <?php } else {?>
               <p style="color: red;">PROJET REJETÉ</p>
