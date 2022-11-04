@@ -5,6 +5,10 @@
   include('nav.inc.php')
 ?>
 
+<?php
+  if($_SESSION["role"]=="adm"){
+?>
+
 <div class=container>
   <h1>Liste des comptes</h1>
 </div>
@@ -47,6 +51,18 @@
     echo "Erreur dans l'execution de la commande SQL";
 
 ?>
+
+<?php
+  }else{
+?>
+
+<p>
+        Vous n'avez pas les droits ici voyons !
+      </p>
+
+<?php
+  }
+?> 
 
 <?php
   include('basdepage.inc.php')

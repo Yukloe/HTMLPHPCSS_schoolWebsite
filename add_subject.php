@@ -6,6 +6,10 @@
   include('nav.inc.php')
 ?>
 
+<?php
+  if($_SESSION["role"]=="tut" || $_SESSION["role"]=="adm"){
+?>
+
 <form  method="POST" action="tt_add_subject.php">
   <div class="container">
 
@@ -43,11 +47,18 @@
   </div>
 </form>
 
- 
+<?php
+  }else{
+?>
+
+<p>
+        Vous n'avez pas les droits ici voyons !
+      </p>
+
+<?php
+  }
+?> 
 
 <?php
   include('basdepage.inc.php')
 ?>
-
-
-<!--ATENTION PDF RENOMMER LE SUJET

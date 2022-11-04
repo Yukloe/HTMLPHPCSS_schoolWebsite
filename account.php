@@ -7,7 +7,23 @@
 ?>
 
 <?php
+  if(isset($_SESSION["email"])){
+?> 
+
+<?php
   echo 'Bonjour ' .$_SESSION['prenom'].'';
+?>
+
+<?php
+  }else{
+?>
+
+<p>
+        Vous n'êtes même pas connecté !
+      </p>
+
+<?php
+  }
 ?>
 
 <?php

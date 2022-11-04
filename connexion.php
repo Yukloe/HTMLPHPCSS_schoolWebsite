@@ -6,6 +6,18 @@
   include('nav.inc.php')
 ?>
 
+<?php
+  if(isset($_SESSION["email"])){
+?> 
+
+<p>
+        Vous êtes déjà connectés !
+      </p>
+
+<?php
+  }else{
+?>
+
 <form  method="POST" action="tt_connexion.php">
   <div class="container">
     <div class="row">
@@ -24,6 +36,10 @@
   </div>
 
 </form>
+
+<?php
+  }
+?>
 
 <?php
   include('basdepage.inc.php')
