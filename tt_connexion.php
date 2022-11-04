@@ -46,7 +46,7 @@
         }
       }
       else{
-        echo '<p>Mot de passe non valide (ou juste code non fonctionnel)</p>';
+        echo '<p>Mot de passe non valide</p>';
         header('Location: connexion.php');
       }
     }

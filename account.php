@@ -11,7 +11,7 @@
 ?> 
 
 <?php
-  echo 'Bonjour ' .$_SESSION['prenom'].'';
+  echo 'Bonjour ' .$_SESSION['prenom'].' , votre rôle est ' .$_SESSION['role'].' et votre email renseignée est ' .$_SESSION['email'].'';
 ?>
 
 <?php
