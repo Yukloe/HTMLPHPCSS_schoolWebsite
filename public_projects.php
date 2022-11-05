@@ -22,9 +22,9 @@
   }
 
   // Execution
-  if ($stmt = $mysqli->prepare("SELECT name, description, multi, confidential FROM `project` WHERE `confidential`=1 AND `valide`=1")){
+  if ($stmt = $mysqli->prepare("SELECT name, description, multi, confidential, prenom, nom FROM `project` INNER JOIN `user` ON user.id = project.creator_id WHERE `confidential`=1 AND `valide`=1")){
     $stmt->execute();
-    $stmt->bind_result($name, $description, $multi, $confidential);
+    $stmt->bind_result($name, $description, $multi, $confidential, $creator_fname, $creator_lname);
 
     while ($stmt->fetch()) { ?>
       <div class="card" style="margin : 10px 20px 0 15px;">
@@ -32,7 +32,7 @@
           <!--Add the name-->
           <h5 class="card-title"><?= $name; ?></h5>
     
-          <!--Add the-->
+          <!--Add the description-->
           <p class="card-text"><?= $description; ?></p>
           
           <!--Verify is the multi-team mode is checked-->
@@ -56,8 +56,9 @@
           <!--Add a space-->
           <p></p>
           
-          <!--Add the file-->
-          <a href="#" class="btn btn-primary">Get the pdf file</a>
+          <!--Add the file download-->
+          <?php $file="{$name}_{$creator_fname}_{$creator_lname}";?>
+          <a href="uploads/download_pdf.php?file=<?php echo $file ?>" class="btn btn-primary">Get the pdf file</a>
         </div>
       </div>
     <?php
