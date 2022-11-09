@@ -10,9 +10,6 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="index.php">Accueil</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="test.php">Test</a>
-              </li>
               <?php
               if(isset($_SESSION["email"])){
               ?>
