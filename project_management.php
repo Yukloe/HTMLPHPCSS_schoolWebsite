@@ -14,7 +14,7 @@
 <?php
   
   // Connexion :
-  require_once("param.inc.project.php");
+  require_once("param.inc.php");
   $mysqli = new mysqli($host, $login, $passwd, $dbname);
   if ($mysqli->connect_error) {
       die('Erreur de connexion (' . $mysqli->connect_errno . ') '
@@ -22,9 +22,9 @@
   }
 
   // Execution
-  if ($stmt = $mysqli->prepare("SELECT id, name, description, multi, confidential, valide, creator_id FROM `project`")){
+  if ($stmt = $mysqli->prepare("SELECT project.id, project.name, project.description, project.multi, project.confidential, project.valide, project.creator_id, user.prenom, user.nom FROM `project` INNER JOIN `user` ON user.id = project.creator_id")){
     $stmt->execute();
-    $stmt->bind_result($id, $name, $description, $multi, $confidential, $valide, $creator_id);
+    $stmt->bind_result($id, $name, $description, $multi, $confidential, $valide, $creator_id, $creator_fname, $creator_lname);
     $index=1;
     while ($stmt->fetch()) { ?>
         <div class="card" style="margin : 10px 20px 0 15px;">
@@ -95,8 +95,8 @@
             <p></p>
             
             <!--Add the file-->
-
-            <a href="#" class="btn btn-primary">Obtenir le fichier pdf</a>
+            <?php $file="{$name}_{$creator_fname}_{$creator_lname}";?>
+            <a href="uploads/download_pdf.php?file=<?php echo $file ?>" class="btn btn-primary">Get the pdf file</a>
 
             <?php if ($valide==0) { ?>
               <!-- Validate projects-->

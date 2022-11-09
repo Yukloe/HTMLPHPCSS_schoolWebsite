@@ -10,7 +10,7 @@
   if($_SESSION["role"]=="tut" || $_SESSION["role"]=="adm"){
 ?>
 
-<form  method="POST" action="tt_add_subject.php">
+<form  method="POST" action="tt_add_subject.php" enctype="multipart/form-data">
   <div class="container">
 
     <div class="row my-2">
@@ -42,7 +42,9 @@
     </div>
 
     <div class="row my-2">
-        <button type="submit" class="btn btn-primary">Envoyer la demande</button>
+      <input type="hidden" name="MAX_FILE_SIZE" value="524288" /> 
+      <input type="file" name="pdfFile" id="pdfFile" required/>
+      <button type="submit" value="Upload file" class="btn btn-primary">Envoyer la demande</button>
     </div>
   </div>
 </form>

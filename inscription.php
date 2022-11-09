@@ -7,7 +7,9 @@
 ?>
 
 <?php
+/*
   if(isset($_SESSION["email"])){
+    */
 ?> 
 
 <form  method="POST" action="tt_inscription.php">
@@ -39,16 +41,19 @@
 
 </form>
 
-<?php
+<?php /*
   }else{
+    */
 ?>
-
+<!--
 <p>
         Pourquoi créer un compte alors que t'es déjà connecté ?!
       </p>
-
+  -->
 <?php
+/*
   }
+  */
 ?>
 
 <?php

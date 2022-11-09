@@ -14,7 +14,7 @@
 <?php
   
   // Connexion :
-  require_once("param.inc.project.php");
+  require_once("param.inc.php");
   $mysqli = new mysqli($host, $login, $passwd, $dbname);
   if ($mysqli->connect_error) {
       die('Erreur de connexion (' . $mysqli->connect_errno . ') '
@@ -22,9 +22,9 @@
   }
 
   // Execution
-  if ($stmt = $mysqli->prepare("SELECT name, description, multi, confidential, valide, creator_id FROM `project`")){
+  if ($stmt = $mysqli->prepare("SELECT project.name, project.description, project.multi, project.confidential, project.valide, project.creator_id, user.prenom, user.nom FROM `project` INNER JOIN `user` ON user.id = project.creator_id")){
     $stmt->execute();
-    $stmt->bind_result($name, $description, $multi, $confidential, $valide, $creator_id);
+    $stmt->bind_result($name, $description, $multi, $confidential, $valide, $creator_id, $creator_fname, $creator_lname);
     while ($stmt->fetch()) { 
       if($creator_id==$_SESSION['id']) { ?>
         <div class="card" style="margin : 10px 20px 0 15px;">
@@ -32,7 +32,7 @@
             <!--Add the name-->
             <h5 class="card-title"><?= $name; ?></h5>
       
-            <!--Add the-->
+            <!--Add the description-->
             <p class="card-text"><?= $description; ?></p>
             
             <!--Verify is the multi-team mode is checked-->
@@ -78,7 +78,7 @@
               ?>
                   <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled checked>
               <?php
-                } else if ($valide!=5) {
+                } if ($valide!=5) {
               ?>
               <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled> 
               <label class="form-check-label" for="flexCheckDisabled">
@@ -93,7 +93,8 @@
             <p></p>
             
             <!--Add the file-->
-            <a href="#" class="btn btn-primary">Get the pdf file</a>
+            <?php $file="{$name}_{$creator_fname}_{$creator_lname}";?>
+            <a href="uploads/download_pdf.php?file=<?php echo $file ?>" class="btn btn-primary">Get the pdf file</a>
             <?php
             if ($valide==5) {
             ?>

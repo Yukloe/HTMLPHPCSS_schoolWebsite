@@ -37,6 +37,7 @@
         if($res_fetch["active"]==1) {
           $_SESSION['email'] = $email;
           $_SESSION['prenom'] = $res_fetch["prenom"];
+          $_SESSION['nom'] = $res_fetch["nom"];
           $_SESSION['role'] = $res_fetch["role"];
           $_SESSION['id'] = $res_fetch["id"];
           header('Location: account.php');
