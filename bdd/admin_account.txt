@@ -3,3 +3,15 @@ Prénom : istrateur
 Email : admin.admein@ad.min
 mdp : addmein
 entreprise : admin
+
+nom : tut
+Prénom : eur
+Email : tut.eur@tuteur.tut
+mdp : tuteur
+entreprise : tuteuring
+
+nom : ref
+Prénom : erent
+Email : ref.erent@referent.ref
+mdp : referent
+entreprise : référé
