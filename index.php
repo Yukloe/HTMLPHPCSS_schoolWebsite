@@ -1,6 +1,6 @@
 <?php
   $titre = "Header";
-  include('header.inc.php')
+  include('header.inc.php');
 ?>
 <?php
   include('nav.inc.php')
@@ -24,18 +24,23 @@
         N’hésitez plus, déposer votre idée, votre projet et bénéficiez de plusieurs étudiants pour travailler à vos côtés. <br>
         Un outil idéal pour développer vos projets d’innovation. <br>
       </p>
-
-      <img src="images/carrousel/construction_project.jpg" class="centrer" alt="image">
-
-      <p><b>DESCRIPTIF GENERAL DU PROJET INGENIEUR</b></p>
-      <b>Le projet ingénieur doit permettre aux élèves ingénieurs :</b>
-        <ol>De développer des compétences techniques en rapport avec le projet et leurs compétences</ol>
-        <ol>D’exercer leur sens de l’initiative et de l’autonomie</ol>
-        <ol>D’apprendre à s’organiser (équipe, délais, budget) et à gérer le temps</ol>
-        <ol>D’améliorer l’aptitude à communiquer (entre les membres de l’équipe, avec l’encadrement, avec le commanditaire du projet, lors de la présentation des résultats du projet)</ol>
-        <ol>D’être en phase avec l’organisation du travail dans l’entreprise, d’être en situation d’exercer leur futur métier</ol>
-      </p>
+      <div class="aligncenter">
+        <img src="images/carrousel/construction_project.jpg" alt="image">
+      </div>
+      <p></p>
       <p>
+        <b>DESCRIPTIF GENERAL DU PROJET INGENIEUR</b> <br>
+        Le projet ingénieur doit permettre aux élèves ingénieurs :
+      </p>
+
+      
+      <ol>De développer des compétences techniques en rapport avec le projet et leurs compétences</ol>
+      <ol>D’exercer leur sens de l’initiative et de l’autonomie</ol>
+      <ol>D’apprendre à s’organiser (équipe, délais, budget) et à gérer le temps</ol>
+      <ol>D’améliorer l’aptitude à communiquer (entre les membres de l’équipe, avec l’encadrement, avec le commanditaire du projet, lors de la présentation des résultats du projet)</ol>
+      <ol>D’être en phase avec l’organisation du travail dans l’entreprise, d’être en situation d’exercer leur futur métier</ol>
+      
+        <p>
         Le projet-ingénieur comprend 150 heures programmées du mois d’octobre à mi-février. <br>
         L’équipe de 6 élèves réalise le projet en conformité avec le cahier des charges proposé. Une recette est réalisée avec le commanditaire en fin de projet.
       </p>
