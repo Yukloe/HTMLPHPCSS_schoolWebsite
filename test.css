@@ -1,15 +1,9 @@
-	/*
-		background-color:#DDD;
-		margin:auto;
-		width:1000px;
-		color: #3F3D40;
-		font-variant:small-caps;
-		font-family: Courier New, monospace;
-		text-align:center; // Centre l'objet
-
+.centrer {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-	*/
-	
+
 body
 {
 	background-color:#DDD;

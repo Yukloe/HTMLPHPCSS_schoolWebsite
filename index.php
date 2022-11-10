@@ -19,56 +19,28 @@
         Afin d'acceder aux différentes fonctionnalités, vous pouvez vous connecter en utilisant le burger de navigation en haut à droite.
       </p>
 
-      <!-- Cette partie est réservée au caroussel -->
-      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="images/carrousel/company.jpg" class="w-auto p-3" alt="Photo esig 1"/>
-          <div class="carousel-caption d-none d-md-block">
-              <h5>L'Ecole Supérieure d'ingénieur en génie électrique</h5>
-              <p>Ecole d'ingénieur abbritant un démon du nom de "Charnacé". Bien que ce ne soit qu'une légende, des traumatisés érrandes bien les couloirs...</p>
-          </div>
-          </div>
-          <div class="carousel-item">
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-            <img src="images/carrousel/construction_project.jpg" class="w-auto p-3" alt="Photo Bro" >
-          </a>
-          <div class="carousel-caption d-none d-md-block">
-              <h5>American exchanged student: Leafwood-pretty</h5>
-              <p>"Une école incredible qui m'a donné des stars dans les yeux... presque autant que ceux de mon drapeau : l'A-ME-RIQUE"</p>
-          </div>
-          </div>
-          <div class="carousel-item">
-            <img src="images/carrousel/construction_site.jpg" class="w-auto p-3" alt="Photo projet PING 1"/>
-          <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>Some representative placeholder content for the third slide.</p>
-          </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-        </div>      
-
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        L’ESIGELEC vous propose de proposer à ses ingénieurs des projets industriels. <br>
+        N’hésitez plus, déposer votre idée, votre projet et bénéficiez de plusieurs étudiants pour travailler à vos côtés. <br>
+        Un outil idéal pour développer vos projets d’innovation. <br>
       </p>
+
+      <img src="images/carrousel/construction_project.jpg" class="centrer" alt="image">
+
+      <p><b>DESCRIPTIF GENERAL DU PROJET INGENIEUR</b></p>
+      <b>Le projet ingénieur doit permettre aux élèves ingénieurs :</b>
+        <ol>De développer des compétences techniques en rapport avec le projet et leurs compétences</ol>
+        <ol>D’exercer leur sens de l’initiative et de l’autonomie</ol>
+        <ol>D’apprendre à s’organiser (équipe, délais, budget) et à gérer le temps</ol>
+        <ol>D’améliorer l’aptitude à communiquer (entre les membres de l’équipe, avec l’encadrement, avec le commanditaire du projet, lors de la présentation des résultats du projet)</ol>
+        <ol>D’être en phase avec l’organisation du travail dans l’entreprise, d’être en situation d’exercer leur futur métier</ol>
+      </p>
+      <p>
+        Le projet-ingénieur comprend 150 heures programmées du mois d’octobre à mi-février. <br>
+        L’équipe de 6 élèves réalise le projet en conformité avec le cahier des charges proposé. Une recette est réalisée avec le commanditaire en fin de projet.
+      </p>
+
+
     </div>
   </body>
 </html>
