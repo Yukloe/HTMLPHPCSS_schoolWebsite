@@ -13,6 +13,10 @@
 
       <p>
         Bienvenue sur ce site de depot et de vérification de projets, au service de l'ESIGELEC. 
+
+        Sur ce site, vous serez capable de déposer différent projets qui seront par la suite vérifié par des responsables PING.
+
+        Afin d'acceder aux différentes fonctionnalités, vous pouvez vous connecter en utilisant le burger de navigation en haut à droite.
       </p>
 
       <!-- Cette partie est réservée au caroussel -->
