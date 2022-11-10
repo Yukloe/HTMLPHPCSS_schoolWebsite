@@ -1,12 +1,13 @@
 <?php
   include('header.inc.php')
 ?>
+
 <?php
   include('nav.inc.php')
 ?>
 
 <?php 
-  // Contenu du formulaire :
+  // form data
   $id =  htmlentities($_POST['id']);
   $action =  htmlentities($_POST['action']);
 ?>

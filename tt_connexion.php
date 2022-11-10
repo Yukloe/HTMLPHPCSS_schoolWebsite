@@ -1,20 +1,18 @@
 <?php
-    //On démarre une nouvelle session
+    //Start a new SESSION
     session_start();
 ?>
 
 <?php
-  // Contenu du formulaire :
+  // data form
   $email =  htmlentities($_POST['email']);
   $password = htmlentities($_POST['password']);
-
   $email = stripcslashes($email);
   $password = stripcslashes($password);
 
-  // Connexion :
+  // connexion
   require_once("param.inc.php");
   $mysqli = new mysqli($host, $login, $passwd, $dbname);
-
   $email = $mysqli -> real_escape_string($email);
   $password = $mysqli -> real_escape_string($password);
 
@@ -32,6 +30,8 @@
       $res_fetch = $result->fetch_assoc();
       if(password_verify($password, $res_fetch["password"])){
         if($res_fetch["active"]==1) {
+
+          // add data to current SESSION
           $_SESSION['email'] = $email;
           $_SESSION['prenom'] = $res_fetch["prenom"];
           $_SESSION['nom'] = $res_fetch["nom"];
@@ -39,6 +39,7 @@
           $_SESSION['id'] = $res_fetch["id"];
           header('Location: index.php');
           $_SESSION['message'] = "Connexion réussi";
+
         } else {
           $_SESSION['message'] = "Erreur : Votre compte n'est pas encore activé";
           header('Location: connexion.php');
@@ -50,5 +51,4 @@
       }
     }
   }
- 
 ?>
