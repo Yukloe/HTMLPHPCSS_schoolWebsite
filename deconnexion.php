@@ -1,4 +1,4 @@
-  <?php
+<?php
   $titre = "Page de comptes";
   include('header.inc.php')
 ?>
@@ -11,10 +11,12 @@
 ?> 
 
 <?php
-  session_destroy();
-  $_SESSION['message'] = "Deonnexion réussi";
-  $msg = $_SESSION['message'];
-  echo "<div class='msgbox'>" . $msg . "</div>";
+  unset($_SESSION['email']);
+  unset($_SESSION['prenom']);
+  unset($_SESSION['nom']);
+  unset($_SESSION['role']);
+  unset($_SESSION['id']);
+  $_SESSION['message'] = "Deconnexion réussi";
   header('Location: index.php');
 ?>
 
