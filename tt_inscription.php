@@ -1,26 +1,23 @@
 <?php
-    //On démarre une nouvelle session
-    session_start();
-    /*On utilise session_id() pour récupérer l'id de session s'il existe.
-     *Si l'id de session n'existe  pas, session_id() rnevoie une chaine de caractères vide*/
+    //Start a new SESSION
     $id_session = session_id();
 ?>
 
 <?php
-  // Contenu du formulaire :
+  // data form
   $nom =  htmlentities($_POST['nom']);
   $prenom = htmlentities($_POST['prenom']);
   $email =  htmlentities($_POST['email']);
   $password = htmlentities($_POST['password']);
   $entreprise = htmlentities($_POST['entreprise']);
-  $role = "vis"; // tut pour tuteur, resp pour responsable PING, adm pour admin par exemple, vis pour visiteur)
+  $role = "vis";
 
-  // Option pour bcrypt
+  // bcrypt option 
   $options = [
         'cost' => 11,
   ];
 
-  // Connexion :
+  // connexion 
   require_once("param.inc.php");
   $mysqli = new mysqli($host, $login, $passwd, $dbname);
   if ($mysqli->connect_error) {
@@ -28,11 +25,11 @@
               . $mysqli->connect_error);
   }
 
-  // Attention, ici on ne vérifie pas si l'utilisateur existe déjà
+  // INSERT sql request
   if ($stmt = $mysqli->prepare("INSERT INTO user(nom, prenom, email, password, role, company) VALUES (?, ?, ?, ?, ?, ?)")) {
     $password = password_hash($password, PASSWORD_BCRYPT, $options);
     $stmt->bind_param("ssssss", $nom, $prenom, $email, $password, $role, $entreprise);
-    // Le message est mis dans la session, il est préférable de séparer message normal et message d'erreur.
+
     if($stmt->execute()) {
         $_SESSION['message'] = "Enregistrement réussi";
         header('Location: index.php');
@@ -42,8 +39,4 @@
         header('Location: inscription.php');
     }
   }
-  // Redirection vers la page d'accueil par exemple :
-  
-
-
 ?>

@@ -1,14 +1,15 @@
 <?php
-  // Importer la session
+
+  // import session
   include('header.inc.php');
 
-  // Contenu du formulaire :
+  // form data
   $name =  htmlentities($_POST['name']);
   $description = htmlentities($_POST['description']);
   $multi =  filter_input(INPUT_POST, 'multi', FILTER_SANITIZE_STRING);
   $confidential =  filter_input(INPUT_POST, 'confidential', FILTER_SANITIZE_STRING);
 
-  // Connexion :
+  // connexion
   require_once("param.inc.php");
   $mysqli = new mysqli($host, $login, $passwd, $dbname);
   if ($mysqli->connect_error) {
@@ -16,13 +17,13 @@
               . $mysqli->connect_error);
   }
 
-  // Attention, ici on ne vérifie pas si le project existe déjà
+  // INSERT sql request
   if ($stmt = $mysqli->prepare("INSERT INTO project(name, description, multi, confidential, creator_id) VALUES (?, ?, ?, ?, ?)")) {
     $stmt->bind_param("sssss", $name, $description, $multi, $confidential, $_SESSION['id']);
-    // Le message est mis dans la session, il est préférable de séparer message normal et message d'erreur.
     if($stmt->execute()) {
       $_SESSION['message'] = "Enregistrement réussi";
-        // Param upload file
+        
+      // param upload file
       if ( isset( $_FILES['pdfFile'] ) ) {
         if ($_FILES['pdfFile']['type'] == "application/pdf") {
           $source_file = $_FILES['pdfFile']['tmp_name'];
@@ -31,8 +32,7 @@
       
           if (file_exists($dest_file)) {
             print "The file name already exists!!";
-          }
-          else {
+          } else {
             move_uploaded_file( $source_file, $dest_file )
             or die ("Error!!");
             if($_FILES['pdfFile']['error'] == 0) {
@@ -44,8 +44,7 @@
               header('Location: index.php');
             }
           }
-        }
-        else {
+        } else {
           if ( $_FILES['pdfFile']['type'] != "application/pdf") {
             print "Error occured while uploading file : ".$_FILES['pdfFile']['name']."<br/>";
             print "Invalid  file extension, should be pdf !!"."<br/>";
