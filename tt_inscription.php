@@ -38,7 +38,7 @@
         header('Location: index.php');
 
     } else {
-        $_SESSION['message'] =  "Impossible d'enregistrer";
+        $_SESSION['message'] =  "Echec : Impossible d'enregistrer";
         header('Location: inscription.php');
     }
   }
