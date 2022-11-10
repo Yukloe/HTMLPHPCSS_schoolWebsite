@@ -1,6 +1,6 @@
 <?php
   $host="localhost";
-  $login="root";
-  $passwd="root";
-  $dbname="esigpingwebsite";
+  $login="grp_9_6";
+  $passwd="HOjD1x7flOfG";
+  $dbname="bdd_9_6";
 ?>
