@@ -17,7 +17,7 @@
                 <a class="nav-link active" aria-current="page" href="account.php">Mon compte</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="deconnexion.php">Deconnexion</a>
+                <a class="nav-link active" aria-current="page" href="deconnexion.php">Deconnexion</a>
               </li>
               <?php
               if($_SESSION["role"]=="adm" || $_SESSION["role"]=="tut"){
@@ -26,7 +26,7 @@
                 <a class="nav-link active" aria-current="page" href="my_projects.php">Liste de mes projets</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="add_subject.php">Ajouter un projet</a>
+                <a class="nav-link active" aria-current="page" href="add_subject.php">Ajouter un projet</a>
               </li>
               <?php
               }
@@ -54,10 +54,10 @@
               }else{
               ?>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="inscription.php">Inscription</a>
+                <a class="nav-link active" aria-current="page" href="inscription.php">Inscription</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="connexion.php">Connexion</a>
+                <a class="nav-link active" aria-current="page" href="connexion.php">Connexion</a>
               </li>
               <?php
               }
