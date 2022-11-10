@@ -22,9 +22,9 @@
   }
 
   // Execution
-  if ($stmt = $mysqli->prepare("SELECT project.name, project.description, project.multi, project.confidential, project.valide, project.creator_id, user.prenom, user.nom FROM `project` INNER JOIN `user` ON user.id = project.creator_id")){
+  if ($stmt = $mysqli->prepare("SELECT project.name, project.description, project.multi, project.confidential, project.valide, project.creator_id, user.prenom, user.nom, project.id FROM `project` INNER JOIN `user` ON user.id = project.creator_id")){
     $stmt->execute();
-    $stmt->bind_result($name, $description, $multi, $confidential, $valide, $creator_id, $creator_fname, $creator_lname);
+    $stmt->bind_result($name, $description, $multi, $confidential, $valide, $creator_id, $creator_fname, $creator_lname, $project_id);
     while ($stmt->fetch()) { 
       if($creator_id==$_SESSION['id']) { ?>
         <div class="card" style="margin : 10px 20px 0 15px;">
@@ -101,7 +101,19 @@
             <p style="color: red;">PROJET REJETÉ</p>
             <?php
             }
+            if ($valide==0) {
             ?>
+            <form action="modify_project.php" method="post" style="margin: 4px 0;">
+              <input type="hidden" name="name" value="<?=$name?>">
+              <input type="hidden" name="description" value="<?=$description?>">
+              <input type="hidden" name="multi" value="<?=$multi?>">
+              <input type="hidden" name="confidential" value="<?=$confidential?>">
+              <input type="hidden" name="creator_id" value="<?=$creator_id?>">
+              <input type="hidden" name="project_id" value="<?=$project_id?>">
+              <button class="btn btn-primary" type="submit">Modifier le projet</button>
+            </form>
+            <?php
+            } ?>
           </div>
         </div>
     <?php

@@ -41,10 +41,10 @@
       </select>
     </div>
 
-    <div class="row my-2">
+    <div class="row my-2" style="margin: 4px 0;">
       <input type="hidden" name="MAX_FILE_SIZE" value="524288" /> 
       <input type="file" name="pdfFile" id="pdfFile" required/>
-      <button type="submit" value="Upload file" class="btn btn-primary">Envoyer la demande</button>
+      <button type="submit" value="Upload file" class="btn btn-primary" style="margin: 8px 0;">Envoyer la demande</button>
     </div>
   </div>
 </form>
