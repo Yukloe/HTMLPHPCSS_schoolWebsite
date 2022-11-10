@@ -12,6 +12,9 @@
 
 <?php
   session_destroy();
+  $_SESSION['message'] = "Deonnexion réussi";
+  $msg = $_SESSION['message'];
+  echo "<div class='msgbox'>" . $msg . "</div>";
   header('Location: index.php');
 ?>
 

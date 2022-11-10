@@ -1,6 +1,7 @@
 <nav class="navbar navbar-dark bg-primary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.php">LOGO ESIG'PING</a>
+          <a class="navbar-brand" href="index.php"></a>
+          <img src="images/logo/ESIGPING.png" class="img-fluid" alt="logo ESIGELEC" style="width:15%">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -13,9 +14,6 @@
               <?php
               if(isset($_SESSION["email"])){
               ?>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="account.php">Mon compte</a>
-              </li>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="deconnexion.php">Deconnexion</a>
               </li>
@@ -67,7 +65,7 @@
 
             <form class="d-flex">
               <a href="https://esigelec.fr/fr">
-                <img src="images/logo/Logo_ESIGELEC.svg" alt="logo ESIGELEC" >  
+                <img src="images/logo/Logo_ESIGELEC.svg" class="img-fluid" alt="logo ESIGELEC">  
               </a>
             </form>
 

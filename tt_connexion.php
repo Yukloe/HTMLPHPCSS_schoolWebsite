@@ -1,9 +1,6 @@
 <?php
     //On démarre une nouvelle session
     session_start();
-    /*On utilise session_id() pour récupérer l'id de session s'il existe.
-     *Si l'id de session n'existe  pas, session_id() rnevoie une chaine de caractères vide*/
-    $id_session = session_id();
 ?>
 
 <?php
@@ -40,14 +37,15 @@
           $_SESSION['nom'] = $res_fetch["nom"];
           $_SESSION['role'] = $res_fetch["role"];
           $_SESSION['id'] = $res_fetch["id"];
-          header('Location: account.php');
+          header('Location: index.php');
+          $_SESSION['message'] = "Connexion réussi";
         } else {
-          echo '<p>Une étude du compte est déjà en cours</p>';
+          $_SESSION['message'] = "Erreur : Votre compte n'est pas encore activé";
           header('Location: connexion.php');
         }
       }
       else{
-        echo '<p>Mot de passe non valide</p>';
+        $_SESSION['message'] = "Erreur : Mauvais mot de passe";
         header('Location: connexion.php');
       }
     }
