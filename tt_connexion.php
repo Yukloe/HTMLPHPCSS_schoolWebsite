@@ -17,7 +17,7 @@
   $password = $mysqli -> real_escape_string($password);
 
   if ($mysqli->connect_error) {
-      die('Erreur de connexion (' . $mysqli->connect_errno . ') '
+      die('Erreur de connection (' . $mysqli->connect_errno . ') '
               . $mysqli->connect_error);
   }else{
     $result = $mysqli->query("SELECT * FROM user WHERE email = '$email'");
@@ -38,7 +38,7 @@
           $_SESSION['role'] = $res_fetch["role"];
           $_SESSION['id'] = $res_fetch["id"];
           header('Location: index.php');
-          $_SESSION['message'] = "Connexion réussi";
+          $_SESSION['message'] = "Connection autorisée";
 
         } else {
           $_SESSION['message'] = "Erreur : Votre compte n'est pas encore activé";

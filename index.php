@@ -9,7 +9,7 @@
 <div class="container">
 
       <!-- Titre principal -->
-      <h1>Projet PING : Site de dépôt de projets</h1>
+      <h1 style="text-align=middle;">Projet PING : Site de dépôt de projets</h1>
 
       <p>
         Bienvenue sur ce site de depot et de vérification de projets, au service de l'ESIGELEC. 
