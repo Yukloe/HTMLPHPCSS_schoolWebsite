@@ -1,9 +1,3 @@
-<style>
-.aligncenter {
-    text-align: center;
-}
-</style>
-
 <nav class="navbar navbar-dark bg-primary">
         <div class="container-fluid">
           <a class="aligncenter" href="index.php" style="">

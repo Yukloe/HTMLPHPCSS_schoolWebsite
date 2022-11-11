@@ -19,3 +19,25 @@
     />
   </head>
   <body>
+  <style>
+    .container {
+      font-family: 'Roboto', sans-serif;
+      font-size: 22px;
+    }
+
+    .aligncenter {
+        text-align: center;
+    }
+
+    .picture {
+      border: 2px solid black;
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    h1 {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+  </style>

@@ -84,13 +84,6 @@
               <label class="form-check-label" for="flexCheckDisabled">
                 Validé
               </label>
-              
-              <div>
-                <p>
-                  <b>Commentaire des responsables :</b><br>
-                  
-                </p>
-              </div>
               <?php
               }
               ?>
