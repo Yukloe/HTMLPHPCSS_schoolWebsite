@@ -11,7 +11,7 @@
 
       <!-- Titre principal -->
       <p></p>
-      <h1 style="text-align: center;">Projet PING : Site de dépôt de projets</h1>
+      <h1>Projet PING : Site de dépôt de projets</h1>
       <p></p>
 
       <p>
@@ -36,7 +36,6 @@
         Le projet ingénieur doit permettre aux élèves ingénieurs :
       </p>
 
-      
       <ol>- De développer des compétences techniques en rapport avec le projet et leurs compétences</ol>
       <ol>- D’exercer leur sens de l’initiative et de l’autonomie</ol>
       <ol>- D’apprendre à s’organiser (équipe, délais, budget) et à gérer le temps</ol>

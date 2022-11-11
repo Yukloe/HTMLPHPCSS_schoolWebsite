@@ -16,7 +16,7 @@
   unset($_SESSION['nom']);
   unset($_SESSION['role']);
   unset($_SESSION['id']);
-  $_SESSION['message'] = "Deconnexion réussi";
+  $_SESSION['message'] = "Déconnexion réussie";
   header('Location: index.php');
 ?>
 

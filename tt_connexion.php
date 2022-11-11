@@ -38,7 +38,7 @@
           $_SESSION['role'] = $res_fetch["role"];
           $_SESSION['id'] = $res_fetch["id"];
           header('Location: index.php');
-          $_SESSION['message'] = "Connexion réussi";
+          $_SESSION['message'] = "Connexion autorisée";
 
         } else {
           $_SESSION['message'] = "Erreur : Votre compte n'est pas encore activé";

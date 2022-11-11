@@ -24,6 +24,7 @@
   }
 
   $id=mysqli_real_escape_string($mysqli,$id);
+  $message=mysqli_real_escape_string($mysqli,$message);
 
   // Update admin message
   $stmt = "UPDATE project SET `admin-message` = '{$message}' WHERE project.id='{$id}'";

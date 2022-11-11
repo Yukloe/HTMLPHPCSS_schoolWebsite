@@ -6,12 +6,6 @@
   include('nav.inc.php')
 ?>
 
-<?php
-/*
-  if(isset($_SESSION["email"])){
-    */
-?> 
-
 <form  method="POST" action="tt_inscription.php">
   <div class="container">
     <div class="row my-2">
@@ -40,21 +34,6 @@
   </div>
 
 </form>
-
-<?php /*
-  }else{
-    */
-?>
-<!--
-<p>
-        Pourquoi créer un compte alors que t'es déjà connecté ?!
-      </p>
-  -->
-<?php
-/*
-  }
-  */
-?>
 
 <?php
   include('basdepage.inc.php')

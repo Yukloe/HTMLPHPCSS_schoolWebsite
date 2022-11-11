@@ -22,9 +22,9 @@
   }
 
   // Execution
-  if ($stmt = $mysqli->prepare("SELECT project.name, project.description, project.multi, project.confidential, project.valide, project.creator_id, user.prenom, user.nom, project.id FROM `project` INNER JOIN `user` ON user.id = project.creator_id")){
+  if ($stmt = $mysqli->prepare("SELECT project.name, project.description, project.multi, project.confidential, project.valide, project.creator_id, user.prenom, user.nom, project.id, project.`admin-message` FROM `project` INNER JOIN `user` ON user.id = project.creator_id")){
     $stmt->execute();
-    $stmt->bind_result($name, $description, $multi, $confidential, $valide, $creator_id, $creator_fname, $creator_lname, $project_id);
+    $stmt->bind_result($name, $description, $multi, $confidential, $valide, $creator_id, $creator_fname, $creator_lname, $project_id, $admin_message);
     while ($stmt->fetch()) { 
       if($creator_id==$_SESSION['id']) { ?>
         <div class="card" style="margin : 10px 20px 0 15px;">
@@ -88,6 +88,21 @@
               }
               ?>
             </div>
+
+            <?php
+                if ($admin_message!=NULL) {
+              ?>
+            <div class="form-check">
+                <p>
+                  <b>Commentaire des responsables :</b> <br>
+                  <?= $admin_message; ?>
+                </p>
+            </div>
+            <?php
+              }
+            ?>
+
+            
 
             <!--Add a space-->
             <p></p>
