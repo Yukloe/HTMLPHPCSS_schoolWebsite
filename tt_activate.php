@@ -18,6 +18,7 @@
   $stmt = "UPDATE user SET active = 1, role='tut' WHERE user.email='{$email}'";
     if ($mysqli->query($stmt) === TRUE) {
         echo "Record updated successfully";
+        $_SESSION['message'] = "Compte activé";
     } else {
         echo "Error updating record: " . $mysqli->error;
     }
