@@ -16,6 +16,7 @@
   $stmt = "UPDATE user SET role='resp' WHERE user.email='{$email}'";
     if ($mysqli->query($stmt) === TRUE) {
         echo "Record updated successfully";
+        $_SESSION['message'] = "Compte mis à jour avec succès";
     } else {
         echo "Error updating record: " . $mysqli->error;
     }

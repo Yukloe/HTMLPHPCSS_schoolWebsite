@@ -6,7 +6,7 @@
 ?>
 
 <?php
-  if($_SESSION["role"]=="adm"){
+  if($_SESSION["role"]=="adm" || $_SESSION["role"]=="resp"){
 ?>
 
 <div class=container>
